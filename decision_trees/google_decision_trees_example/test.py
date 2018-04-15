@@ -1,4 +1,4 @@
-import update_path
+import setup
 import decisions
 
 training_data = decisions.training_data
