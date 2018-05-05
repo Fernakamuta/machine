@@ -49,7 +49,7 @@ def class_counts(rows):
 
 #######
 # Demo:
-# class_counts(training_data)
+class_counts(training_data)
 #######
 
 
@@ -97,11 +97,12 @@ class Question:
 # Let's write a question for a numeric attribute
 Question(1, 3)
 # How about one for a categorical attribute
-q = Question(0, 'Green')
+q = Question(0, 'Red')
+q
 # Let's pick an example from the training set...
-example = training_data[0]
+training_data
+example = training_data[2]
 # ... and see if it matches the question
-training_data[0]
 q.match(example)
 #######
 
@@ -123,11 +124,11 @@ def partition(rows, question):
 #######
 # Demo:
 # Let's partition the training data based on whether rows are Red.
-# true_rows, false_rows = partition(training_data, Question(0, 'Red'))
+true_rows, false_rows = partition(training_data, Question(0, 'Red'))
 # This will contain all the 'Red' rows.
-# true_rows
+true_rows
 # This will contain everything else.
-# false_rows
+false_rows
 #######
 
 def gini(rows):
@@ -254,6 +255,8 @@ def find_best_split(rows):
 # Demo:
 # Find the best question to ask first for our toy dataset.
 best_gain, best_question = find_best_split(training_data)
+best_gain
+best_question
 # FYI: is color == Red is just as good. See the note in the code above
 # where I used '>='.
 #######
@@ -358,6 +361,7 @@ def classify(row, node):
 # The tree predicts the 1st row of our
 # training data is an apple with confidence 1.
 my_tree = build_tree(training_data)
+print_tree(my_tree)
 classify(training_data[0], my_tree)
 #######
 
@@ -379,6 +383,7 @@ print_leaf(classify(training_data[0], my_tree))
 #######
 # Demo:
 # On the second example, the confidence is lower
+
 print_leaf(classify(training_data[1], my_tree))
 #######
 
