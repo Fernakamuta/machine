@@ -4,7 +4,7 @@ import numpy as np
 
 # Carregando Dataset iris
 iris = load_iris()
-
+type(iris)
 # Examinando o Dataset
 dir(iris)
 iris.feature_names

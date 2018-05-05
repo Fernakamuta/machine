@@ -12,7 +12,7 @@ testing_data = [
     ['Yellow', 4],
     ['Red', 2],
     ['Red', 1],
-    ['Yellow', 3],
+    ['Yellow', 3]
 ]
 
 for row in testing_data:
